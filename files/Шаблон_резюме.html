@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шаблон резюме</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .print-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #00ff87;
+            color: #000;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+
+        .print-btn:hover {
+            opacity: 0.9;
+        }
+
+        .resume {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #00ff87;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .header p {
+            color: #777;
+            margin-top: 10px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .section-content {
+            line-height: 1.6;
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 600px) {
+            .print-btn {
+                font-size: 14px;
+                padding: 10px 15px;
+                width: 100%;
+                text-align: center;
+            }
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+            .resume {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Сохранение цветов при печати/PDF */
+        @media print {
+            body { background: #fff; margin: 0; }
+            .print-btn { display: none; }
+            .resume { box-shadow: none; padding: 0; }
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Распечатать / Сохранить как PDF</button>
+
+    <div class="resume">
+        <div class="header">
+            <h1>Иванов Иван Иванович</h1>
+            <p>Специалист по технологиям машиностроения</p>
+        </div>
+
+        <h2>Контактная информация</h2>
+        <div class="contact-info">
+            <p><strong>Телефон:</strong> +7 (900) 123-45-67</p>
+            <p><strong>Email:</strong> ivanov@mail.ru</p>
+            <p><strong>Город:</strong> г. Воронеж</p>
+            <p><strong>Дата рождения:</strong> 01.01.2004</p>
+        </div>
+
+        <h2>Цель</h2>
+        <div class="section-content">
+            <p>Получение должности оператора станков с ЧПУ на производственном предприятии. Готов к профессиональному росту, освоению новых технологий и работе в команде.</p>
+        </div>
+
+        <h2>Образование</h2>
+        <div class="section-content">
+            <p><strong>2020 - 2024</strong> — ГБПОУ ВО "Хреновской лесной колледж имени Г.Ф. Морозова"</p>
+            <p>Специальность: Технология машиностроения (диплом с отличием)</p>
+        </div>
+
+        <h2>Опыт работы</h2>
+        <div class="section-content">
+            <p><strong>2023 - 2024</strong> — Производственная практика, ООО "Бобровтехмаш"</p>
+            <ul>
+                <li>Настройка и обслуживание станков с ЧПУ;</li>
+                <li>Контроль качества выпускаемой продукции;</li>
+                <li>Разработка управляющих программ.</li>
+            </ul>
+        </div>
+
+        <h2>Профессиональные навыки</h2>
+        <div class="section-content">
+            <ul>
+                <li>Уверенный пользователь AutoCAD, Компас-3D;</li>
+                <li>Работа с технической документацией;</li>
+                <li>Знание основ метрологии.</li>
+            </ul>
+        </div>
+
+        <h2>Личные качества</h2>
+        <div class="section-content">
+            <p>Ответственность, внимательность к деталям, быстрое обучение, стрессоустойчивость.</p>
+        </div>
+    </div>
+
+</body>
+</html>
