@@ -9,26 +9,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Подключение стилей -->
-     <link rel="icon" type="image/jpeg" href="images/logohlk.jpg">
-     <link rel="stylesheet" href="reset.css">
+    <link rel="icon" type="image/jpeg" href="images/logohlk.jpg">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="collegewebsite.css">
 </head>
 <body>
 
-    <!-- Кнопка переключения версии для слабовидящих -->
+    <!-- ====== КНОПКА ДОСТУПНОСТИ ====== -->
     <div class="accessibility-toggle">
         <button onclick="toggleAccessibility()" aria-label="Версия для слабовидящих">
             <i class="fa-solid fa-eye"></i> Версия для слабовидящих
         </button>
     </div>
 
-    <!-- Шапка сайта -->
+    <!-- ====== ШАПКА ====== -->
     <header>
         <div class="logo">
             <img src="images/logohlk.jpg" alt="Логотип колледжа">
             <div>Хреновской <span>Лесной</span> Колледж</div>
         </div>
         
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+            <span></span><span></span><span></span>
+        </button>
+
         <nav>
             <ul id="nav-menu">
                 <li><a href="#home" class="active" onclick="showSection('home')">Главная</a></li>
@@ -37,17 +41,17 @@
                 <li><a href="#student" onclick="showSection('student')">Студентам</a></li>
                 <li><a href="#graduate" onclick="showSection('graduate')">Выпускникам</a></li>
                 <li><a href="#infra" onclick="showSection('infra')">Инфраструктура</a></li>
+                <li><a href="#news" onclick="showSection('news')">Новости</a></li>
                 <li><a href="#contacts" onclick="showSection('contacts')">Контакты</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- ================= ГЛАВНАЯ СТРАНИЦА ================= -->
+    <!-- ====== ГЛАВНАЯ ====== -->
     <section id="home" class="content-section active hero">
         <div class="hero-content">
             <h1>Твой путь в <span class="highlight">Робототехнику</span>, Лесное дело и Инженерию</h1>
             <p>Современные технологии, мощная база и 130-летний опыт подготовки специалистов.</p>
-            
             <div class="hero-buttons">
                 <a href="#applicant" class="btn" onclick="showSection('applicant')">Поступить сюда</a>
                 <a href="#infra" class="btn btn-outline" onclick="showSection('infra')">Наша инфраструктура</a>
@@ -55,14 +59,11 @@
         </div>
     </section>
 
-    <!-- ================= СВЕДЕНИЯ ОБ ОБРАЗОВАТЕЛЬНОЙ ОРГАНИЗАЦИИ ================= -->
+    <!-- ====== СВЕДЕНИЯ ОБ ОО ====== -->
     <section id="about" class="content-section">
         <h2 class="section-title">Сведения об образовательной организации</h2>
         <p class="lead">Раздел сформирован в соответствии с требованиями Приказа Рособрнадзора.</p>
-
-        <!-- Аккордеон с разделами -->
         <div class="accordion">
-            
             <!-- 1. Основные сведения -->
             <div class="acc-item">
                 <button class="acc-btn">Основные сведения <i class="fa-solid fa-chevron-down"></i></button>
@@ -73,7 +74,6 @@
                     <p><strong>Режим работы:</strong> Пн-Пт с 8:00 до 17:00</p>
                 </div>
             </div>
-
             <!-- 2. Структура и органы управления -->
             <div class="acc-item">
                 <button class="acc-btn">Структура и органы управления <i class="fa-solid fa-chevron-down"></i></button>
@@ -84,7 +84,6 @@
                     <p>Управление осуществляется на основе сочетания принципов единоначалия и коллегиальности. Действует педагогический совет.</p>
                 </div>
             </div>
-
             <!-- 3. Документы -->
             <div class="acc-item">
                 <button class="acc-btn">Документы <i class="fa-solid fa-chevron-down"></i></button>
@@ -97,7 +96,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- 4. Образование -->
             <div class="acc-item">
                 <button class="acc-btn">Образование <i class="fa-solid fa-chevron-down"></i></button>
@@ -115,7 +113,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- 5. Руководство и педагогический состав -->
             <div class="acc-item">
                 <button class="acc-btn">Руководство и педагогический состав <i class="fa-solid fa-chevron-down"></i></button>
@@ -124,7 +121,6 @@
                     <p>45% педагогов имеют высшую квалификационную категорию. Ежегодно проходят курсы повышения квалификации.</p>
                 </div>
             </div>
-
             <!-- 6. Материально-техническое обеспечение -->
             <div class="acc-item">
                 <button class="acc-btn">Материально-техническое обеспечение <i class="fa-solid fa-chevron-down"></i></button>
@@ -138,7 +134,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- 7. Стипендии и меры поддержки -->
             <div class="acc-item">
                 <button class="acc-btn">Стипендии и меры поддержки <i class="fa-solid fa-chevron-down"></i></button>
@@ -146,7 +141,6 @@
                     <p>Обучающимся назначается государственная академическая и социальная стипендия. Иногородним предоставляется общежитие.</p>
                 </div>
             </div>
-
             <!-- 8. Платные образовательные услуги -->
             <div class="acc-item">
                 <button class="acc-btn">Платные образовательные услуги <i class="fa-solid fa-chevron-down"></i></button>
@@ -154,7 +148,6 @@
                     <p><strong>ВНИМАНИЕ:</strong> Платные образовательные услуги <strong>не оказываются</strong>. Обучение полностью бесплатное.</p>
                 </div>
             </div>
-
             <!-- 9. Финансово-хозяйственная деятельность -->
             <div class="acc-item">
                 <button class="acc-btn">Финансово-хозяйственная деятельность <i class="fa-solid fa-chevron-down"></i></button>
@@ -162,7 +155,6 @@
                     <p>Финансирование осуществляется за счет средств бюджета Воронежской области.</p>
                 </div>
             </div>
-
             <!-- 10. Доступная среда -->
             <div class="acc-item">
                 <button class="acc-btn">Доступная среда <i class="fa-solid fa-chevron-down"></i></button>
@@ -170,7 +162,6 @@
                     <p>Вход оборудован пандусом, работает версия сайта для слабовидящих. При необходимости предоставляется сопровождение.</p>
                 </div>
             </div>
-
             <!-- 11. Международное сотрудничество -->
             <div class="acc-item">
                 <button class="acc-btn">Международное сотрудничество <i class="fa-solid fa-chevron-down"></i></button>
@@ -178,7 +169,6 @@
                     <p>Студенты специальности "Технология машиностроения" ежегодно проходят практику в Чехии.</p>
                 </div>
             </div>
-
             <!-- 12. Вакантные места для приема -->
             <div class="acc-item">
                 <button class="acc-btn">Вакантные места для приема <i class="fa-solid fa-chevron-down"></i></button>
@@ -189,52 +179,24 @@
         </div>
     </section>
 
-    <!-- ================= АБИТУРИЕНТАМ ================= -->
+    <!-- ====== АБИТУРИЕНТАМ ====== -->
     <section id="applicant" class="content-section">
         <h2 class="section-title">Абитуриентам</h2>
         <p class="lead">Информация для поступающих в 2026-2027 учебном году.</p>
         
         <h3>Контрольные цифры приема</h3>
         <table>
-            <tr>
-                <th>Специальность</th>
-                <th>План приема</th>
-            </tr>
-            <tr>
-                <td>15.02.18 Техническая эксплуатация роботизированного производства</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>15.02.08 Технология машиностроения</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>35.02.01 Лесное и лесопарковое хозяйство</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>35.02.12 Садово-парковое строительство</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>49.02.01 Физическая культура</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>15.01.05 Сварщик</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>38.02.01 Экономика и бухгалтерский учет</td>
-                <td>25</td>
-            </tr>
-            <tr>
-                <td>25.02.08 Эксплуатация беспилотных авиационных систем</td>
-                <td>25</td>
-            </tr>
+            <tr><th>Специальность</th><th>План приема</th></tr>
+            <tr><td>15.02.18 Техническая эксплуатация роботизированного производства</td><td>25</td></tr>
+            <tr><td>15.02.08 Технология машиностроения</td><td>50</td></tr>
+            <tr><td>35.02.01 Лесное и лесопарковое хозяйство</td><td>25</td></tr>
+            <tr><td>35.02.12 Садово-парковое строительство</td><td>25</td></tr>
+            <tr><td>49.02.01 Физическая культура</td><td>25</td></tr>
+            <tr><td>15.01.05 Сварщик</td><td>25</td></tr>
+            <tr><td>38.02.01 Экономика и бухгалтерский учет</td><td>25</td></tr>
+            <tr><td>25.02.08 Эксплуатация беспилотных авиационных систем</td><td>25</td></tr>
         </table>
 
-        <!-- Документы для приема -->
         <h3>Документы для приема</h3>
         <div class="accordion">
             <div class="acc-item">
@@ -246,12 +208,10 @@
                     <strong>Для иностранных граждан:</strong> перевод паспорта и документов об образовании, заверенный нотариусом.</p>
                 </div>
             </div>
-
             <div class="acc-item">
                 <button class="acc-btn">Льготы и меры социальной поддержки <i class="fa-solid fa-chevron-down"></i></button>
                 <div class="acc-content">
                     <p><strong>Льготы при поступлении (первоочередное право):</strong> Герои РФ, лица, награжденные орденом Мужества, ветераны боевых действий, военнослужащие, члены их семей.</p>
-
                     <p style="margin-top: 20px; font-weight: bold; color: var(--accent-green);">Дополнительные меры поддержки обучающихся:</p>
                     <ul>
                         <li><strong>Дети участников СВО:</strong> Бесплатное проживание в общежитии, бесплатное двухразовое питание в столовой, первоочередное предоставление мест в общежитии.</li>
@@ -263,10 +223,9 @@
         </div>
     </section>
 
-    <!-- ================= СТУДЕНТАМ ================= -->
+    <!-- ====== СТУДЕНТАМ ====== -->
     <section id="student" class="content-section">
         <h2 class="section-title">Студентам</h2>
-        
         <h3>Режим занятий</h3>
         <div class="schedule-grid">
             <div class="schedule-col">
@@ -276,7 +235,6 @@
                    Обед: 11:50 – 12:30<br>
                    3-я пара: 12:30 – 14:05</p>
             </div>
-            
             <div class="schedule-col">
                 <h4>Суббота</h4>
                 <p>1-я пара: 8:00 – 9:35<br>
@@ -284,7 +242,6 @@
                    3-я пара: 11:30 – 13:05</p>
             </div>
         </div>
-
         <h3>Электронные сервисы</h3>
         <div class="glass-list">
             <ul>
@@ -296,110 +253,83 @@
         </div>
     </section>
 
-    <!-- ================= ВЫПУСКНИКАМ ================= -->
+    <!-- ====== ВЫПУСКНИКАМ ====== -->
     <section id="graduate" class="content-section">
         <h2 class="section-title">Выпускникам</h2>
         <p class="lead">Центр содействия трудоустройству выпускников</p>
-        
         <p>Основной целью деятельности Центра является адаптация выпускников на рынке труда, эффективное трудоустройство и построение успешной карьеры.</p>
-
-        <!-- Банк вакансий -->
+        
         <h3>Банк вакансий (прямые работодатели)</h3>
         <div class="job-grid">
-            
-            <!-- Вакансия 1 -->
             <div class="job-card">
                 <div class="job-icon"><i class="fa-solid fa-train"></i></div>
                 <div class="job-info">
                     <h4>Работа в РЖД</h4>
-                    <p>Машинисты, помощники машинистов, монтеры пути, электромонтеры. Официальное трудоустройство, социальный пакет.</p>
+                    <p>Машинисты, помощники машинистов, монтеры пути, электромонтеры.</p>
                     <a href="https://team.rzd.ru/career/vacancies" target="_blank" class="job-link">Смотреть вакансии <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-
-            <!-- Вакансия 2 -->
             <div class="job-card">
                 <div class="job-icon"><i class="fa-solid fa-industry"></i></div>
                 <div class="job-info">
                     <h4>Вакансии Бобровтехмаш</h4>
-                    <p>Операторы станков с ЧПУ, токари, сварщики, инженеры-технологи. Стабильная зарплата и полный соцпакет.</p>
+                    <p>Операторы станков с ЧПУ, токари, сварщики, инженеры-технологи.</p>
                     <a href="https://bobrov.hh.ru/vacancies" target="_blank" class="job-link">Смотреть вакансии <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-
-            <!-- Вакансия 3 -->
             <div class="job-card">
                 <div class="job-icon"><i class="fa-solid fa-atom"></i></div>
                 <div class="job-info">
                     <h4>ОКБМ приглашает на работу</h4>
-                    <p>Сборщики, регулировщики радиоэлектронной аппаратуры, контролеры ОТК. Предприятие оборонно-промышленного комплекса.</p>
+                    <p>Сборщики, регулировщики радиоэлектронной аппаратуры.</p>
                     <a href="https://nn.hh.ru/employer/801783" target="_blank" class="job-link">Смотреть вакансии <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-
-            <!-- Вакансия 4 -->
             <div class="job-card">
                 <div class="job-icon"><i class="fa-solid fa-bolt"></i></div>
                 <div class="job-info">
                     <h4>Вакансии ООО Завод ЭЛТА</h4>
-                    <p>Электромонтажники, наладчики, специалисты по качеству. Развитие в сфере электротехники и автоматизации.</p>
+                    <p>Электромонтажники, наладчики, специалисты по качеству.</p>
                     <a href="https://hh.ru/employer/193545" target="_blank" class="job-link">Смотреть вакансии <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-
         </div>
 
-        <!-- Методические рекомендации -->
         <h3>Методические материалы и рекомендации</h3>
         <div class="accordion">
-            
-            <div class="acc-item active">
+            <div class="acc-item">
                 <button class="acc-btn">Как составить резюме <i class="fa-solid fa-chevron-down"></i></button>
                 <div class="acc-content">
-                    <p><strong>1. Структура:</strong> ФИО, контакты, цель, образование, опыт, навыки, дополнительные сведения.</p>
-                    <p><strong>2. Правила:</strong> Резюме должно занимать 1-2 страницы. Используйте простой шрифт, избегайте таблиц и лишней графики.</p>
-                    <p><strong>3. Советы:</strong> Пишите конкретно: не "работал с документами", а "оформлял отчетность в 1С". Укажите достижения.</p>
-                    <div style="margin-top: 15px;">
-                        <!-- Файл должен лежать в папке files рядом с index.html -->
-                        <a href="files/Шаблон_резюме.html" target="_blank" class="btn-small"><i class="fa-solid fa-download"></i> Скачать шаблон резюме</a>
-                    </div>
+                    <p><strong>1. Структура:</strong> ФИО, контакты, цель, образование, опыт, навыки.</p>
+                    <p><strong>2. Правила:</strong> 1-2 страницы, простой шрифт.</p>
+                    <p><strong>3. Советы:</strong> Конкретные формулировки, достижения.</p>
+                    <div style="margin-top:15px;"><a href="files/Шаблон_резюме.html" target="_blank" class="btn-small"><i class="fa-solid fa-download"></i> Скачать шаблон</a></div>
                 </div>
             </div>
-
             <div class="acc-item">
                 <button class="acc-btn">Собеседование: как пройти успешно <i class="fa-solid fa-chevron-down"></i></button>
                 <div class="acc-content">
-                    <p><strong>Подготовка:</strong> Изучите компанию перед встречей, подготовьте 3-4 вопроса о работе и коллективе.</p>
-                    <p><strong>Поведение:</strong> Приходите за 10 минут, выключите телефон, держитесь уверенно, не перебивайте собеседника.</p>
-                    <p><strong>Типичные ошибки:</strong> Опоздание, негатив о прошлом работодателе, отсутствие вопросов.</p>
-                    <div style="margin-top: 15px;">
-                        <!-- Файл должен лежать в папке files рядом с index.html -->
-                        <a href="files/Чек-лист_подготовки.html" target="_blank" class="btn-small"><i class="fa-solid fa-download"></i> Скачать чек-лист подготовки</a>
-                    </div>
+                    <p><strong>Подготовка:</strong> Изучите компанию, подготовьте вопросы.</p>
+                    <p><strong>Поведение:</strong> Приходите за 10 минут, выключите телефон.</p>
+                    <div style="margin-top:15px;"><a href="files/Чек-лист_подготовки.html" target="_blank" class="btn-small"><i class="fa-solid fa-download"></i> Скачать чек-лист</a></div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- ================= ИНФРАСТРУКТУРА ================= -->
+    <!-- ====== ИНФРАСТРУКТУРА ====== -->
     <section id="infra" class="content-section">
         <h2 class="section-title">Инфраструктура и условия</h2>
         <p class="lead">У нас есть все условия для комфортной учебы и полноценной жизни.</p>
-        
         <div class="infra-grid">
-            
-            <!-- Бассейн (большая карточка) -->
             <div class="infra-card big">
                 <div class="infra-img" style="background-image: url('images/basik.jpg');"></div>
                 <div class="infra-info">
                     <h3><i class="fa-solid fa-person-swimming"></i> Плавательный бассейн</h3>
-                    <p>Собственный современный бассейн для занятий спортом, тренировок и проведения уроков физкультуры.</p>
+                    <p>Собственный современный бассейн для занятий спортом.</p>
                     <a href="#contacts" class="btn" onclick="showSection('contacts')">Записаться на экскурсию</a>
                 </div>
             </div>
-
-            <!-- Ледовый дворец -->
             <div class="infra-card">
                 <div class="infra-img" style="background-image: url('images/ledovyi.jpg');"></div>
                 <div class="infra-info">
@@ -407,8 +337,6 @@
                     <p>Крытый каток с современным покрытием.</p>
                 </div>
             </div>
-
-            <!-- Общежития -->
             <div class="infra-card">
                 <div class="infra-img" style="background-image: url('images/obshaga.jpg');"></div>
                 <div class="infra-info">
@@ -416,44 +344,45 @@
                     <p>Уютное проживание для иногородних студентов.</p>
                 </div>
             </div>
-
-            <!-- Столовая -->
             <div class="infra-card">
                 <div class="infra-img" style="background-image: url('images/stolovaia.jpg');"></div>
                 <div class="infra-info">
-                    <h3><i class="fa-solid fa-utensils"></i> Просторная столовая</h3>
-                    <p>Вкусное и сбалансированное питание.</p>
+                    <h3><i class="fa-solid fa-utensils"></i> Столовая</h3>
+                    <p>Сбалансированное питание.</p>
                 </div>
             </div>
-
-            <!-- Спортзал -->
             <div class="infra-card">
                 <div class="infra-img" style="background-image: url('images/stadion.jpg');"></div>
                 <div class="infra-info">
-                    <h3><i class="fa-solid fa-dumbbell"></i> Тренажерные залы</h3>
-                    <p>Современное оборудование и стадион.</p>
+                    <h3><i class="fa-solid fa-dumbbell"></i> Спорткомплекс</h3>
+                    <p>Тренажерные залы, стадион.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ================= КОНТАКТЫ ================= -->
+    <!-- ====== НОВОСТИ (ДОБАВЛЕН НОВЫЙ РАЗДЕЛ) ====== -->
+    <section id="news" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Новости колледжа</h2>
+            <p class="lead">События, достижения и объявления.</p>
+            <div class="news-grid">
+                <!-- Сюда динамически подгружаются новости из news.json или демо-данные -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== КОНТАКТЫ ====== -->
     <section id="contacts" class="content-section">
         <h2 class="section-title">Контакты и реквизиты</h2>
         <p class="lead">Мы всегда на связи! Приходите к нам на экскурсию или задайте вопрос онлайн.</p>
         
         <div class="contact-grid">
-            
-            <!-- Адрес -->
             <div class="contact-card">
                 <h3><i class="fa-solid fa-location-dot"></i> Адрес и карта</h3>
-                <p>397743, ул. Большая, 44,<br>
-                   с. Слобода, Бобровский район,<br>
-                   Воронежская область.</p>
+                <p>397743, ул. Большая, 44,<br>с. Слобода, Бобровский район,<br>Воронежская область.</p>
                 <a href="https://yandex.ru/maps/?text=Хреновской лесной колледж" target="_blank">Построить маршрут</a>
             </div>
-            
-            <!-- Телефоны -->
             <div class="contact-card">
                 <h3><i class="fa-solid fa-phone"></i> Телефоны</h3>
                 <p><strong>Приемная комиссия:</strong><br>
@@ -462,24 +391,20 @@
                 <p><strong>Приемная директора:</strong><br>
                    <a href="tel:+74735061103">+7 47350-6-11-03</a></p>
             </div>
-
-            <!-- Почта -->
             <div class="contact-card">
                 <h3><i class="fa-solid fa-envelope"></i> Почта</h3>
                 <p><a href="mailto:hlklez@govvrn.ru">hlklez@govvrn.ru</a></p>
-                <p><strong>Реквизиты:</strong><br>ИНН/КПП: 3602001617
-360201001</p>
+                <p><strong>Реквизиты:</strong><br>ИНН/КПП: 3602001617 / 360201001</p>
             </div>
         </div>
     </section>
 
-    <!-- ================= ПОДВАЛ ================= -->
+    <!-- ====== ПОДВАЛ ====== -->
     <footer>
         <div class="footer-col">
             <h4>О колледже</h4>
             <p>ГБПОУ ВО "Хреновской лесной колледж имени Г.Ф. Морозова" — старейшее учебное заведение России.</p>
         </div>
-        
         <div class="footer-col">
             <h4>Навигация по сайту</h4>
             <p>
@@ -488,19 +413,19 @@
                 <a href="#contacts" onclick="showSection('contacts')">Контакты</a>
             </p>
         </div>
-        
         <div class="footer-col">
             <h4>Социальные сети</h4>
             <p>Мы ВКонтакте</p>
-            
-            <!-- Ссылка на ВК -->
             <a href="https://vk.com/hlk_professionalitet" target="_blank" class="vk-link">
                 <i class="fa-brands fa-vk"></i>
             </a>
         </div>
     </footer>
 
-    <!-- Подключение скриптов -->
+    <!-- ====== КНОПКА НАВЕРХ ====== -->
+    <button id="scrollTopBtn" aria-label="Наверх">⬆</button>
+
+    <!-- ====== ПОДКЛЮЧЕНИЕ JS ====== -->
     <script src="collegewebsite.js"></script>
 </body>
 </html>
