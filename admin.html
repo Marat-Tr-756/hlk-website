@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель — Новости</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h1>📰 Управление новостями</h1>
+        
+        <!-- Форма добавления/редактирования новости -->
+        <div class="form-card">
+            <h2 id="form-title">➕ Добавить новость</h2>
+            <input type="hidden" id="edit-id" value="">
+
+            <input type="text" id="news-title" placeholder="Заголовок новости" required>
+            <input type="date" id="news-date" placeholder="Дата">
+            <textarea id="news-text" placeholder="Текст новости..." rows="4" required></textarea>
+            <input type="text" id="news-image" placeholder="Ссылка на картинку (или оставьте пустым)">
+            
+            <button id="save-btn" class="btn">Сохранить новость</button>
+            <button id="cancel-btn" class="btn btn-outline" style="display:none;">Отмена</button>
+        </div>
+
+        <!-- Список новостей -->
+        <h2>📋 Список новостей</h2>
+        <div id="news-list" class="news-list">
+            <p>Загрузка...</p>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
